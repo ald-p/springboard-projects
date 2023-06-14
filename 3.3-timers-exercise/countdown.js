@@ -1,6 +1,6 @@
 /* timers exercise */
 
-const countdown = function(num) {
+function countdown(num) {
 
   let intervalId;
 
