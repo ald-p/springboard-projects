@@ -32,3 +32,17 @@ formEl.addEventListener('submit', function(e) {
   toDoList.appendChild(newToDoEl);
   textInput.value = '';
 });
+
+// complete to-do
+toDoList.addEventListener('change', function(e) {
+  const toDoItemEl = e.target.parentElement;
+  toDoItemEl.classList.toggle('completed');
+});
+
+// delete to-do
+toDoList.addEventListener('click', function(e) {
+  if (e.target.className === 'delete-btn') {
+    const toDoItemEl = e.target.parentElement;
+    toDoItemEl.remove();
+  }
+});
